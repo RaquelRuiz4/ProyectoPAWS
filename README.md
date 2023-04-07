@@ -29,3 +29,8 @@ El proyecto utiliza las siguientes tecnologías:
 - AWS 
 
 ## Prototipo en Figma :art:
+
+No es el prototipo final ni tampoco están todas las páginas diseñadas, solo es un pequeño ejemplo de la idea que tengo. 
+
+- https://www.figma.com/file/7XaAedYglb21a8i95Bspek/proyecto-DI?node-id=0%3A1&t=LlJEJ2NOhjnFjCpK-1
+
