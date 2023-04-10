@@ -2,8 +2,19 @@
 
 # PAWS Centro veterinario :dog:
 
-La página del centro veterinario permite a los clientes conocer los servicios que se ofrece en el centro, solicitar citas online, consultar los profesionales, obtener información sobre los precios y horarios de atención.
-También se podrá acceder como administrador, de forma que podrá visualizar las citas que tiene, los clientes y sus dueños.
+El proyecto que he elegido es una página web de un centro veterinario orientado en perros.
+
+## Objetivos 🎯
+
+- Informar sobre los servicios: Mostrar información detallada sobre los servicios que ofrece el centro, como chequeos de salud, vacunas, cirugías, tratamientos de enfermedades, cuidado dental, etc. 
+
+- Hacer reservas: Ofrecer la opción de pedir cita online. Esto permite a los dueños de perros reservar fácilmente citas.
+
+- Educación sobre el cuidado de los perros: Incluir información educativa sobre el cuidado de los perros, como consejos sobre nutrición, higiene, ejercicios y entrenamiento. 
+
+- Fidelización de clientes: Incluir contenido actualizado, como noticias, eventos, promociones y más, que mantienen a los dueños interesados por el centro.
+
+- Comunicación con el centro veterinario: Ofrecer opciones para que los dueños de perros se comuniquen con el centro veterinario. Incluir formularios de contacto que permitan a los clientes hacer preguntas o solicitar información adicional.
 
 ## Tecnologías utilizadas 📚
 
