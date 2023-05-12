@@ -45,3 +45,7 @@ No es el prototipo final ni tampoco están todas las páginas diseñadas, solo e
 
 - https://www.figma.com/file/7XaAedYglb21a8i95Bspek/proyecto-DI?node-id=0%3A1&t=LlJEJ2NOhjnFjCpK-1
 
+### Modelo de la Base de Datos
+
+![image](https://github.com/RaquelRuiz4/ProyectoPAWS/assets/71552386/e7b59da8-b6c6-4454-85af-519f92ed2792)
+
