@@ -31,8 +31,287 @@ video {
    font-size: 18px;
 }
 
-.titulo{
-    font-family: Georgia, "Times New Roman", Times, serif;
-    font-size: 50px;
+
+@font-face {
+    font-family: "miFuente";
+    src: url("Myfont-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+  }
+  
+  body {
+    background-color: rgba(255, 255, 255, 0.204);
+    margin: 0 auto;
+    scroll-behavior: smooth;
+  }
+  
+  h1 {
+    font-family: miFuente;
+    font-size: 90px;
+    position: absolute;
     text-align: center;
-}
+    z-index: 4;
+    color: #000000;
+  }
+  
+  .title {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+  }
+  
+  h3 {
+    font-size: 60px;
+    text-align: center;
+    z-index: 4;
+    color: #000000;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+  
+  nav {
+    background-color: #303030;
+    overflow: hidden;
+    position: relative;
+    z-index: 3;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  nav li {
+    float: left;
+  }
+  
+  nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: 8px;
+  }
+  
+  nav li a:hover {
+    background-color: #9b9b9a;
+  }
+  
+  nav li:last-child {
+    float: right;
+  }
+  
+  #logout {
+    float: right;
+  }
+  
+  .capa {
+    background-color: rgba(142, 141, 141, 0.523);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -0.5%;
+  }
+  
+  .seccion {
+    position: relative;
+    overflow: hidden;
+  }
+  video {
+    z-index: 2;
+    overflow: hidden;
+  }
+  
+  .canvasContainer {
+    width: 40vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  #pr {
+    width: 100%;
+    height: 400px;
+  }
+  
+  #canvas {
+    /* border: 2px solid #000000; */
+    border-radius: 10%;
+  }
+  
+  #otra {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .texto {
+    padding: 0px 70px 0px 70px;
+    width: 60vw;
+  }
+  
+  .texto p {
+    columns: 2;
+    column-gap: 2em;
+    text-align: justify;
+    float: right;
+    font-size: 30px;
+  }
+  
+  .contactoTitulo {
+    width: 100vw;
+    height: 50vw;
+  }
+  
+  #mapa {
+    width: 50%;
+    height: 100%;
+    padding-left: 5vw;
+  }
+  
+  #contactoMapa {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 50vh;
+    margin-top: 45px;
+  }
+  
+  table {
+    font-size: 2.5vh;
+    width: 30vw;
+  }
+  
+  @media (min-width: 1080px) {
+    .texto p {
+      font-size: 1.3vw;
+    }
+  
+    .lados {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 50vh;
+      margin-top: 45px;
+    }
+  
+    .canvasContainer {
+      padding-left: 10%;
+    }
+    #clientes, #contacto{
+      font-size: 5vh;
+      margin-top: 20px;
+    }
+  }
+  
+  @media (max-width: 1079px) {
+    .lados {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .canvasContainer {
+      width: 100vw;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 760px) {
+    .title {
+      top: 70px;
+    }
+    .title h1 {
+      font-size: 55px;
+      top: 30vh;
+    }
+    .lados {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    h3 {
+      font-size: 55px;
+    }
+    .canvasContainer {
+      width: 100vw;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .segundoTexto {
+      display: none;
+    }
+    .texto p {
+      columns: 1;
+    }
+  }
+  
+  @media (min-width: 1079px) and (max-width: 1500px) {
+    .segundoTexto {
+      display: none;
+    }
+    .texto p {
+      columns: 1;
+    }
+    .canvasContainer {
+      width: 55vw;
+    }
+  }
+  
+  * {
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  section {
+    height: 10vh;
+    width: 10vh;
+    /* background: rgb(255,255,255); */
+    /* display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;*/
+    position: absolute;
+    z-index: 5;
+    margin: 80px;
+    border-radius: 50%;
+    bottom: -90px;
+    right: -93px;
+  }
+  
+  svg {
+    position: fixed;
+    cursor: pointer;
+  }
+  
+  body {
+    font-family: Nunito;
+    font-size: 1.2rem;
+  }
+  
+  footer {
+    margin-top: 185px;
+    /* margin-left: 40vw; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .logos{
+    margin-top: -10px;
+  }

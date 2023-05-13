@@ -41,11 +41,6 @@ class CitaController extends Controller
         return redirect()->route("citas.mostrarCitas");
     }
 
-    public function editar(Request $req, Cita $cita)
-    {
-        dd($cita);
-    }
-
     public function mostrarFormCita()
     {
 

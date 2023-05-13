@@ -22,7 +22,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [
     'middleware' => 'guest',
     function () {
-        return view('auth.login');
+        //return view('auth.login');
+        return view('inicio');
     }
 ]);
 

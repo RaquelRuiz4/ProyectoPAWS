@@ -25,7 +25,7 @@
 
             <div class="form-group">
                 <label for="fecha_cita">Fecha y hora</label>
-                <input type="date" class="form-control" id="fecha_cita" name="fecha_cita">
+                <input type="datetime-local" class="form-control" id="fecha_cita" name="fecha_cita">
             </div>
             <button class="btn btn-dark mt-3">Aceptar</button>
         </form>

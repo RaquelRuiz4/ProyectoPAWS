@@ -27,8 +27,4 @@ class VeterinarioController extends Controller
 
     }
 
-    public function editar(Request $req, Veterinario $veterinario)
-    {
-        dd($veterinario);
-    }
 }
