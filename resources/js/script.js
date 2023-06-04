@@ -1,6 +1,7 @@
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 const temaSelector = document.getElementById("tema");
+const galeriaSelector = document.getElementById("galeria");
 
 // Iconos de facebook, youtube e instagram
 
@@ -31,6 +32,23 @@ function drawImage() {
 }
 
 drawImage();
+
+async function muestraDatosCuriosos(){
+  
+  for(let i=0; i<5; i++){
+    const req = await fetch("https://dog.ceo/api/breeds/image/random");
+    const dato = await req.json();
+    galeriaSelector.innerHTML += `
+      <div class="galeria__item--${i + 1}">
+        <img src="${dato.message}" class="galeria__img" alt="Imagen ${i + 1}">
+      </div>
+    `;
+  }
+};
+muestraDatosCuriosos();
+
+
+
 
 function nextImage() {
   currentIndex = (currentIndex + 1) % images.length;
@@ -90,3 +108,11 @@ darkMode.addEventListener("click", () => {
     gallo.play();
   }
 });
+
+
+
+
+
+
+
+
