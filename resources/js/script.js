@@ -13,11 +13,11 @@ const grillo = document.getElementById("grillo");
 // Array de imágenes para Canvas
 
 const images = [
-  "images/imagen/imagen1.jpg",
-  "images/imagen/imagen2.jpg",
-  "images/imagen/imagen3.jpg",
-  "images/imagen/imagen4.jpg",
-  "images/imagen/imagen5.jpg",
+  "images/imagen/vet1.jpg",
+  "images/imagen/vet2.jpg",
+  "images/imagen/vet3.jpg",
+  "images/imagen/vet4.jpg",
+  "images/imagen/vet5.jpg",
 ];
 
 let currentIndex = 0;
