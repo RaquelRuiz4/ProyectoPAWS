@@ -36,8 +36,6 @@ class MascotasController extends Controller
     public function insertar(Request $req)
     {
         $idDueno = Auth::id();
-        //$idDueno = Usuario::consigueIdDuenio($userId)->items->attributes->idDue;
-        //$idDueno = Usuario::consigueIdDuenio($userId)[0]->idDue;
 
         $mascota = new Perro;
         $mascota->idDue = $idDueno;

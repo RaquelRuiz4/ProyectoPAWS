@@ -16,12 +16,12 @@ class DatabaseSeeder extends Seeder
         //\App\Models\Veterinario::factory(5)->create();
         // \App\Models\Dueno::factory(10)->create();
         $this->call([
-            UsuarioTableSeeder::class, VeterinarioSeeder::class
+            UsuarioTableSeeder::class, VeterinarioSeeder::class,  MedicamentosTableSeeder::class
         ]);
         \App\Models\Perro::factory(10)->create();
         \App\Models\Cita::factory(10)->create();
 
-
+       
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([

@@ -21,7 +21,14 @@ class RedirectIfAuthenticated
 
         foreach ($guards as $guard) {
             if (Auth::guard($guard)->check()) {
-                return redirect(RouteServiceProvider::HOME);
+                // Si es admin retornar a citas
+                if(Auth::user()->admin){
+                    return redirect("/citas/mostrarCitas");
+                }
+                // De lo contrario retornar veterinarios
+                else{
+                    return redirect("/veterinarios");
+                }
             }
         }
 
