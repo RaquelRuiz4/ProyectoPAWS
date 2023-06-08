@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MedicamentoController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\VeterinarioController;
 use App\Http\Controllers\CitaController;
@@ -33,6 +34,26 @@ Route::get('/inicio', function () {
 
 Route::middleware('auth')->group(function () {
     Route::get("/veterinarios", [VeterinarioController::class, "listar"])->name("veterinarios");
+
+
+      Route::group(
+        [
+            "prefix" => "medicamentos",
+            "as" => "medicamentos.",
+            "middleware" => ["auth"]
+        ],
+        function () {
+           
+            Route::get('/', [MedicamentoController::class, 'index'])->name('index');
+            Route::get('/crear', [MedicamentoController::class, 'create'])->name('create');
+            Route::post('/', [MedicamentoController::class, 'store'])->name('store');
+            Route::get('/{medicamento}/editar', [MedicamentoController::class, 'edit'])->name('edit');
+            Route::patch('/{medicamento}', [MedicamentoController::class, 'update'])->name('update');
+            Route::delete('/{medicamento}', [MedicamentoController::class, 'destroy'])->name('destroy');
+        }
+    );
+
+
 
     Route::group(
         [

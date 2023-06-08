@@ -16,6 +16,7 @@ class Medicamento extends Model
      */
     protected $table = 'medicamentos';
 
+    protected $primaryKey = 'ID_Medicamento';
     /**
      * The attributes that are mass assignable.
      *

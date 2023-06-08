@@ -42,6 +42,13 @@
                         </x-nav-link>
                         }
                     @endif
+                    @if (Auth::check() && Auth::user()->admin)
+                    {
+                    <x-nav-link :href="route('medicamentos.index')" :active="request()->routeIs('medicamentos.index')">
+                        {{ __('Medicamentos') }}
+                    </x-nav-link>
+                    }
+                @endif
                     <!-- <x-nav-link :href="route('veterinarios')" :active="request()->routeIs('veterinarios')">
                         {{ __('Veterinarios') }}
                     </x-nav-link> -->
