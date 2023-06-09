@@ -71,7 +71,6 @@ Route::middleware('auth')->group(function () {
             // Edita la mascota con los datos recogidos del formulario
             Route::post("/editar", [MascotasController::class, "editar"])->name("editar");
 
-
             // Redirige hasta el formulario que inserta la mascota en cuestión 
             Route::get("/formularioIns", [MascotasController::class, "formularioIns"])->name("formularioIns");
 

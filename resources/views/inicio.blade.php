@@ -31,21 +31,18 @@
                 </div>
                 <div class="texto">
                     <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error harum,
-                        blanditiis dolores ea illo maiores soluta incidunt aut eaque delectus
-                        modi ducimus sit praesentium qui voluptate officiis nesciunt
-                        exercitationem temporibus? Nulla voluptate nihil consequatur
-                        exercitationem temporibus consectetur ex maxime officia fuga laborum,
-                        tempore quo. Aliquid nesciunt minus ipsum autem mollitia. Reiciendis
-                        corrupti quas maxime ratione accusamus quisquam nam ipsa aspernatur?
-                        Dolorum rem corrupti corporis molestiae explicabo, quibusdam harum,
+                        En nuestro centro veterinario canino, entendemos que tu perro
+                        es más que una mascota, es un miembro valioso de tu familia.
+                        Por eso, nos enorgullece ofrecer servicios de atención médica
+                        de alta calidad y un cuidado excepcional para tu fiel compañero.
+
+
                         <span class="segundoTexto">
-                            dolorem nobis commodi sunt ab ratione ex unde. Voluptatibus nihil
-                            dolor omnis eum ratione modi totam animi atque, nisi, distinctio
-                            porro fuga? Aut ipsum vero earum, mollitia, aperiam voluptas tempore
-                            odit optio eligendi quo ipsam quibusdam sapiente sint, fugiat sit ab
-                            a placeat natus iure repellendus dolores at dolor. Exercitationem,
-                            excepturi voluptatum?
+                            Nuestro equipo de veterinarios altamente capacitados y
+                            amantes de los perros está dedicado a proporcionar un cuidado
+                            compasivo y personalizado para cada paciente que nos visita.
+                            Ya sea que necesites una consulta de rutina, vacunas, atención
+                            preventiva o tratamiento médico avanzado, estamos aquí para ayudarte.
                         </span>
                     </p>
                 </div>

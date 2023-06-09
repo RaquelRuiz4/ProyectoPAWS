@@ -4,11 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Models\Medicamento;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class MedicamentoController extends Controller
 {
     public function index()
     {
+        if(!Auth::user()->admin){
+            return redirect()->route('inicio');
+        }
         $medicamentos = Medicamento::all();
         return view('medicamentos.index', compact('medicamentos'));
     }
