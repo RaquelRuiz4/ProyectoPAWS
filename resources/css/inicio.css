@@ -200,14 +200,17 @@ video {
   .texto {
     padding: 0px 70px 0px 70px;
     width: 60vw;
+    font-family: Nunito;
   }
   
 
   .segundoTexto {
     display: none;
+    font-family: Nunito;
   }
   .texto p {
     columns: 1;
+    font-family: Nunito;
   }
   
   .contactoTitulo {
