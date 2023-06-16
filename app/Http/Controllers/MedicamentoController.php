@@ -19,7 +19,7 @@ class MedicamentoController extends Controller
 
     public function create()
     {
-        return view('medicamentos.create');
+        return view('medicamentos.insMedicamento');
     }
 
     public function store(Request $request)
@@ -31,17 +31,23 @@ class MedicamentoController extends Controller
         ]);
 
         // Crea un nuevo medicamento en la base de datos
-        Medicamento::create([
-            'nombre' => $request->nombre,
-            'cantidad' => $request->cantidad,
-        ]);
+        $medicamento = new Medicamento();
+        $medicamento->Nombre = $request->nombre;
+        $medicamento->Cantidad = $request->cantidad;
+        $medicamento->Descripción = $request->descripcion;
+        $medicamento->Indicaciones = $request->indicaciones;
+        $medicamento->Precio = $request->precio;
+
+        $medicamento->save();
 
         return redirect()->route('medicamentos.index')->with('success', 'Medicamento creado correctamente.');
     }
 
-    public function edit(Medicamento $medicamento)
+    public function edit(Request $request, $medicamento)
     {
-        return view('medicamentos.edit', compact('medicamento'));
+        //$medicamentoInfo = Medicamento::find($medicamento);
+        $medicamentoInfo = Medicamento::where('ID_Medicamento', $medicamento)->first();
+        return view('medicamentos.actMedicamento',  ["medicamento" => $medicamentoInfo]);
     }
 
     public function update(Request $request, Medicamento $medicamento)
@@ -52,11 +58,9 @@ class MedicamentoController extends Controller
             'cantidad' => 'required|numeric',
         ]);
 
-        // Actualiza los datos del medicamento en la base de datos
-        $medicamento->update([
-            'nombre' => $request->nombre,
-            'cantidad' => $request->cantidad,
-        ]);
+        $medicamento->Nombre = $request->nombre;
+        $medicamento->Cantidad = $request->cantidad;
+        $medicamento->save();
 
         return redirect()->route('medicamentos.index')->with('success', 'Medicamento actualizado correctamente.');
     }

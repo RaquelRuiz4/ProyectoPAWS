@@ -48,7 +48,7 @@ Route::middleware('auth')->group(function () {
             Route::get('/crear', [MedicamentoController::class, 'create'])->name('create');
             Route::post('/', [MedicamentoController::class, 'store'])->name('store');
             Route::get('/{medicamento}/editar', [MedicamentoController::class, 'edit'])->name('edit');
-            Route::patch('/{medicamento}', [MedicamentoController::class, 'update'])->name('update');
+            Route::post('/{medicamento}', [MedicamentoController::class, 'update'])->name('update');
             Route::delete('/{medicamento}', [MedicamentoController::class, 'destroy'])->name('destroy');
         }
     );

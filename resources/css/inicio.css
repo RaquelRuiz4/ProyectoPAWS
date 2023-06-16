@@ -175,9 +175,9 @@ video {
   h1 {
     font-family: miFuente;
     font-size: 90px;
-    position: absolute;
+    /* position: absolute;
     z-index: 4;
-    color: #000000;
+    color: #000000; */
   }
   
   .title {
@@ -309,7 +309,14 @@ video {
     width: auto;
     border-radius: 5px;
   }
+  
+  .medicamento_item{
+    padding: 20px 0px;
+  }
 
+  .medicamento_container{
+    align-items:center;
+  }
   @media (max-width: 1079px) {
     .lados {
       display: flex;

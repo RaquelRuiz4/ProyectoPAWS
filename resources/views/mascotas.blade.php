@@ -28,14 +28,14 @@
                     </a>
                     <div class="boton_eliminar">
                         <a href="{{ route('mascotas.eliminar', $mascota->idPer) }}">
-                            <button class="btn btn-danger">Delete</button>
+                            <button class="bg-red-400 hover:bg-red-600 text-white font-bold py-2 px-4 rounded">Delete</button>
                         </a>
                     </div>
                 </div>
             
             @endforeach
             @if(Auth::id() == $mascotas[0]->idDue)
-            <a href="{{ route('mascotas.formularioIns') }}"><button class="bg-yellow-400 hover:bg-yellow-500 text-white font-bold py-2 px-4 rounded">Insert Pet</button></a>
+            <a href="{{ route('mascotas.formularioIns') }}"><button class="bg-stone-400 hover:bg-stone-500 text-white font-bold py-2 px-4 rounded">Insert Pet</button></a>
             @endif
         </div>
         @endempty

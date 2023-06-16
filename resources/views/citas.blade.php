@@ -37,7 +37,7 @@
                         <td class="p-4">{{$cita->especialidad}}</td>
                         <td class="p-4">{{$cita->nombrePerro}}</td>
                         <td class="p-4">
-                            <a class="bg-yellow-400 hover:bg-yellow-500 text-white font-bold py-2 px-4 rounded" href="{{ route("citas.eliminarCita", $cita->idCit) }}" >Delete</a>
+                            <a class="bg-red-400 hover:bg-red-600 text-white font-bold py-2 px-4 rounded" href="{{ route("citas.eliminarCita", $cita->idCit) }}" >Delete</a>
                         </td>
                     </tr>
                     @endforeach
@@ -45,7 +45,7 @@
             </table>
 
             @if(!Auth::user()->admin)
-            <a href="{{ route("citas.insCita") }}" class="btn btn-dark">Schedule an appointment</a>
+            <a href="{{ route("citas.insCita") }}" class="bg-stone-400 hover:bg-stone-500 text-white font-bold py-2 px-4 rounded">Schedule an appointment</a>
             @endif
 
         </div>
