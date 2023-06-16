@@ -1,86 +1,28 @@
-{{-- @vite(['resources/css/inicio.css'])
-<x-app-layout>
-    <h1 class="titulo">Medicamentos</h1>
-    
-    <div class="container w-65 d-flex justify-content-center">
-        @if(count($medicamentos) == 0)
-            <div class="d-flex justify-content-center flex-column align-items-center" role="alert">
-                <div class="mt-4 alert alert-danger align-self-center" role="alert">
-                    No hay medicamentos disponibles.
-                </div>
-                @if(!Auth::user()->admin)
-                    <a href="{{ route('medicamentos.create') }}" class="btn btn-dark">Agregar Medicamento</a>
-                @endif
-            </div>
-        @else
-            <div class="d-flex flex-column align-items-start">
-                <table class="mt-4 table table-striped">
-                    <thead>
-                        <tr>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Cantidad</th>
-                            <th scope="col"></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach($medicamentos as $medicamento)
-                            <tr>
-                                <td>{{ $medicamento->Nombre }}</td>
-                                <td>
-                                    @if(Auth::user()->admin)
-                                        <input type="number" class="form-control" value="{{ $medicamento->Cantidad }}">
-                                    @else
-                                        {{ $medicamento->Cantidad }}
-                                    @endif
-                                </td>
-                                <td>
-                                    @if(Auth::user()->admin)
-                                        <form action="{{ route('medicamentos.destroy', $medicamento->ID_Medicamento) }}" method="POST">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button type="submit" class="btn btn-danger">Eliminar</button>
-                                        </form>
-                                    @endif
-                                </td>
-                            </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-                @if(!Auth::user()->admin)
-                    <a href="{{ route('medicamentos.create') }}" class="btn btn-dark">Agregar Medicamento</a>
-                @endif
-            </div>
-        @endif
-    </div>
-</x-app-layout> --}}
-
-
-
 @vite(['resources/css/inicio.css'])
 <x-app-layout>
-    <h1 class="titulo">Medicamentos</h1>
+    <h1 class="titulo">Medications</h1>
     
-    <div class="container w-65 d-flex justify-content-center">
+    <div class="container w-65 flex justify-center">
         @if(count($medicamentos) == 0)
-        <div class="d-flex justify-content-center flex-column align-items-center" role="alert">
+        <div class="flex justify-center flex-col items-center" role="alert">
 
-            <div class="mt-4 alert alert-danger align-self-center" role="alert">
-                Actualmente no tienes medicamentos.
+            <div class="mt-4 bg-red-500 text-white px-4 py-2 rounded" role="alert">
+                Currently, there are no medications available.
             </div>
             @if(!Auth::user()->admin)
-            <a href="{{ route('medicamentos.create') }}" class="btn btn-dark">Crear medicamento</a>
+            <a href="{{ route('medicamentos.create') }}" class="bg-gray-800 text-white font-bold py-2 px-4 mt-4 rounded">Add Medication</a>
             @endif
         </div>
 
         @else
-        <div class="d-flex  flex-column align-items-start">
+        <div class="flex flex-col items-start">
 
-            <table class="mt-4 table table-striped">
+            <table class="mt-4 table table-striped bg-white border-collapse">
                 <thead>
                     <tr>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Descripción</th>
-                        <th scope="col">Acciones</th>
+                        <th scope="col" class="p-4">Name</th>
+                        <th scope="col" class="p-4">Description</th>
+                        <th scope="col" class="p-4">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -90,11 +32,11 @@
                         <td>{{$medicamento->Nombre}}</td>
                         <td>{{$medicamento->Descripción}}</td>
                         <td>
-                            <a href="{{ route('medicamentos.edit', $medicamento->ID_Medicamento) }}" class="btn btn-primary">Editar</a>
-                            <form action="{{ route('medicamentos.destroy', $medicamento->ID_Medicamento) }}" method="POST" class="d-inline">
+                            <a href="{{ route('medicamentos.edit', $medicamento->ID_Medicamento) }}" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Edit</a>
+                            <form action="{{ route('medicamentos.destroy', $medicamento->ID_Medicamento) }}" method="POST" class="inline">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn btn-danger">Eliminar</button>
+                                <button type="submit" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded">Delete</button>
                             </form>
                         </td>
                     </tr>
@@ -102,11 +44,10 @@
                 </tbody>
             </table>
             @if(!Auth::user()->admin)
-            <a href="{{ route('medicamentos.create') }}" class="btn btn-dark">Crear medicamento</a>
+            <a href="{{ route('medicamentos.create') }}" class="bg-gray-800 text-white font-bold py-2 px-4 mt-4 rounded">Add Medication</a>
             @endif
 
         </div>
     </div>
     @endempty
 </x-app-layout>
-

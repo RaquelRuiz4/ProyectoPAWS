@@ -53,7 +53,7 @@
             </div>
 
             @if (Auth::check())
-                {
+                
                 <!-- Settings Dropdown -->
                 <div class="hidden sm:flex sm:items-center sm:ml-6 z-30">
                     <x-dropdown align="right" width="100">

@@ -1,42 +1,74 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+ body .loginContainer {
+    z-index: 2;
+    background-color: #00000052; /* Color negro */
+}
+
+body .login_container {
+    z-index: 1;
+    position: fixed;
+    right: 0;
+    background-color: #00000052;
+}
+
+
+  
+
+.font-indieflower {
+    font-family: 'Indie Flower', cursive;
+  }
+  
+.login_container .tituloLogin{
+font-size: 80px;
+font-family: 'Indie Flower', cursive;
+font-family: 'Nunito', sans-serif;
+}
+
+#email{
+    background-color: rgba(255, 255, 255, 0.466);
+}
+
+#password{
+    background-color: rgba(255, 255, 255, 0.466);
+}
+/* Tus estilos personalizados aquí */
+.loginContainer .pink-button {
+    /* background-color: #ffc0cb; */
+    color: #ffffff; 
+        background-color:#f8b154;
+
+  }
+
 .navegacion {
     background-color: #5c5c5c;
 }
 
-.boton_eliminar{
+.boton_eliminar {
     padding: 0px 0px 10px 16px;
 }
 
-.loginContainer{
-
-    z-index: 2;
-}
-
-.login_container{
-    z-index: 1;
-    position: fixed;
-    right: 0;
-    background: #00000052;
-}
-
-.login_container .min-h-screen{
+.login_container .min-h-screen {
     padding: 20px;
 }
 
-.video_perro{
-         position: absolute; 
-        right: auto;
-        bottom: 0;
-         min-width: 100vw; 
-         min-height: 100vh;
+.video_perro {
+    position: absolute;
+    right: auto;
+    bottom: 0;
+    min-width: 100vw;
+    min-height: 100vh;
 }
-.videoLogin{
+.videoLogin {
     position: static;
     z-index: 1;
 }
 
-.bg-gray-100{
+/* .bg-gray-100 {
     z-index: 1;
     position: fixed;
     right: 0;
     background: #00000052;
-}
+} */

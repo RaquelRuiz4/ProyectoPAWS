@@ -13,6 +13,9 @@ module.exports = {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
+            colors: {
+                'black-transparent': '#00000085',
+            },
         },
     },
 

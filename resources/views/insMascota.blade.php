@@ -1,38 +1,39 @@
 @vite(['resources/css/inicio.css'])
 <x-app-layout>
     <h1 class="titulo">Insertar mascota</h1>
-    <div class="container w-65 d-flex justify-content-center">
-        <form action="{{ route("mascotas.insertar") }}" method="post">
+    <div class="container w-65 mx-auto">
+        <form action="{{ route('mascotas.insertar') }}" method="post" class="max-w-lg mx-auto">
             @csrf
-            <div class="form-group">
-                <label for="nombrePerro">Nombre Mascota</label>
-                <input type="text" class="form-control" id="nombrePerro" name="nombrePerro">
+            <div class="mb-4">
+                <label for="nombrePerro" class="block font-bold">Nombre Mascota</label>
+                <input type="text" class="form-input" id="nombrePerro" name="nombrePerro">
             </div>
 
-            <div class="form-group">
-                <label for="raza">Raza</label>
-                <input type="text" class="form-control" id="raza" name="raza">
+            <div class="mb-4">
+                <label for="raza" class="block font-bold">Raza</label>
+                <input type="text" class="form-input" id="raza" name="raza">
             </div>
 
-            <div class="form-group">
-                <label for="genero">Género</label>
-                <input type="text" class="form-control" id="genero" name="genero">
+            <div class="mb-4">
+                <label for="genero" class="block font-bold">Género</label>
+                <input type="text" class="form-input" id="genero" name="genero">
             </div>
 
-            <div class="form-group">
-                <label for="edad">Edad</label>
-                <input type="number" class="form-control" id="edad" name="edad">
+            <div class="mb-4">
+                <label for="edad" class="block font-bold">Edad</label>
+                <input type="number" class="form-input" id="edad" name="edad">
             </div>
 
-            <div class="form-group">
-                <label for="peso">Peso</label>
-                <input type="number" class="form-control" id="peso" name="peso">
+            <div class="mb-4">
+                <label for="peso" class="block font-bold">Peso</label>
+                <input type="number" class="form-input" id="peso" name="peso">
             </div>
 
-            <div class="form-group">
-                <label for="foto">Foto</label>
-                <input type="text" class="form-control" id="foto" name="foto">
+            <div class="mb-4">
+                <label for="foto" class="block font-bold">Foto</label>
+                <input type="text" class="form-input" id="foto" name="foto">
             </div>
+
             <button class="btn btn-dark mt-3">Guardar</button>
         </form>
     </div>
