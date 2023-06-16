@@ -14,40 +14,40 @@
                 </div>
 
                 <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex nav_links">
                     <x-nav-link :href="route('inicio')" :active="request()->routeIs('inicio')">
                         {{ __('Inicio') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('citas.mostrarCitas')" :active="request()->routeIs('citas')">
+                    <x-nav-link  :href="route('citas.mostrarCitas')" :active="request()->routeIs('citas')">
                         {{ __('Citas') }}
                     </x-nav-link>
                     @if (Auth::check() && !Auth::user()->admin)
-                        {
+                        
                         <x-nav-link :href="route('veterinarios')" :active="request()->routeIs('veterinarios')">
                             {{ __('Veterinarios') }}
                         </x-nav-link>
-                        }
+                        
                     @endif
                     @if (Auth::check() && !Auth::user()->admin)
-                        {
+                        
                         <x-nav-link :href="route('mascotas.mostrar')" :active="request()->routeIs('mascotas')">
                             {{ __('Mascotas') }}
                         </x-nav-link>
-                        }
+                        
                     @endif
                     @if (Auth::check() && Auth::user()->admin)
-                        {
+                        
                         <x-nav-link :href="route('clientes.muestraClientes')" :active="request()->routeIs('clientes.muestraClientes')">
                             {{ __('Clientes') }}
                         </x-nav-link>
-                        }
+                        
                     @endif
                     @if (Auth::check() && Auth::user()->admin)
-                    {
+                    
                     <x-nav-link :href="route('medicamentos.index')" :active="request()->routeIs('medicamentos.index')">
                         {{ __('Medicamentos') }}
                     </x-nav-link>
-                    }
+
                 @endif
                 </div>
             </div>

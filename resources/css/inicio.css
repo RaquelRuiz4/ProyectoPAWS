@@ -286,7 +286,30 @@ video {
       width: 100%;
     }
   }
+
+  .nav_links a:hover{
+    border-bottom: 5px solid orange;
+  }
+
+  .nav_links a{
+   color: white;
+  }
   
+  .mascota_link{
+    padding: 10px 3px;
+    height: 450px;
+  }
+
+  .mascota_img{
+    height: 250px;
+  }
+
+  .mascota_img img{
+    height: 100%;
+    width: auto;
+    border-radius: 5px;
+  }
+
   @media (max-width: 1079px) {
     .lados {
       display: flex;

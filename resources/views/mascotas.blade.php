@@ -14,8 +14,10 @@
             @foreach($mascotas as $mascota)
             <div class="col-3 card bg-white hover:scale-105 rounded-lg shadow-md flex flex-col items-center justify-center text-center hover:text-yellow-400 transition-all">
                
-                    <a class="hover:text-yellow-400" href="{{ route('mascotas.formularioAct', $mascota) }}">
-                        <img src="{{ $mascota->fotoPerro }}" class="card-img-top mx-auto imagen-mascota" alt="...">
+                    <a class="hover:text-yellow-400 mascota_link" href="{{ route('mascotas.formularioAct', $mascota) }}">
+                        <div class="mascota_img">
+                            <img src="{{ $mascota->fotoPerro }}" class="card-img-top mx-auto imagen-mascota" alt="...">
+                        </div>
                         <div class="card-body">
                             <p class="card-text text-lg font-bold mb-2 hover:text-yellow-400"><b>Name:</b> {{ $mascota->nombrePerro }}</p>
                             <p class="card-text"><b>Breed:</b> {{ $mascota->raza }}</p>

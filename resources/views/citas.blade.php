@@ -37,7 +37,7 @@
                         <td class="p-4">{{$cita->especialidad}}</td>
                         <td class="p-4">{{$cita->nombrePerro}}</td>
                         <td class="p-4">
-                            <a href="{{ route("citas.eliminarCita", $cita->idCit) }}" class="bg-yellow-400 hover:bg-yellow-500 text-white font-bold py-2 px-4 rounded">Delete</a>
+                            <a class="bg-yellow-400 hover:bg-yellow-500 text-white font-bold py-2 px-4 rounded" href="{{ route("citas.eliminarCita", $cita->idCit) }}" >Delete</a>
                         </td>
                     </tr>
                     @endforeach
