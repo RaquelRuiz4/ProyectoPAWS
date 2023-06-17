@@ -6,6 +6,44 @@
     top: 0px;
 }
 
+.footer {
+  background-color: #f2f2f2;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-social-icons {
+  margin-bottom: 20px;
+}
+
+.social-icon {
+  display: inline-block;
+  margin: 0 10px;
+  color: #333;
+  font-size: 20px;
+}
+
+.footer-copyright {
+  color: #666;
+  font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .imagen-mascota {
   width: 100%; /* Ajusta el ancho según tus necesidades */
   height: auto; /* Ajusta la altura proporcionalmente */
@@ -15,6 +53,7 @@
 .tituloInicio {
   font-family: 'Indie Flower', cursive;
   font-size: 12vh;
+  font-weight: bold;
 }
 
 
@@ -50,10 +89,10 @@ body {
 
 .lados__container{
   width: 100%;
+  display: flex;
+  justify-content:center;
 }
 footer {
-  margin-top: 185px;
-  /* margin-left: 40vw; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -69,14 +108,32 @@ footer {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
+}
+
+.aboutUs{
+  font-family: 'Indie Flower', cursive;
+  font-weight: bold;
+  font-size: 7vh;
+}
+
+.clientesPerros{
+    font-family: 'Indie Flower', cursive;
+  font-weight: bold;
+  font-size: 7vh;
+}
+.contactoWeb{
+  font-family: 'Indie Flower', cursive;
+  font-weight: bold;
+  font-size: 7vh;
 }
 
 #galeria {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(8, 5vw);
+  grid-template-rows: repeat(5, 5vw);
   grid-gap: 15px;
-  width: 70vw;
+  width: 60vw;
   margin-top: 40px;
 }
 
@@ -113,13 +170,6 @@ footer {
   grid-column-end: 5;
   grid-row-start: 3;
   grid-row-end: 6;
-}
-
-.galeria__item--5 {
-  grid-column-start: 1;
-  grid-column-end: 9;
-  grid-row-start: 6;
-  grid-row-end: 9;
 }
 
 .contenedor__principal{
@@ -172,13 +222,6 @@ video {
     scroll-behavior: smooth;
   }
   
-  h1 {
-    font-family: miFuente;
-    font-size: 90px;
-    /* position: absolute;
-    z-index: 4;
-    color: #000000; */
-  }
   
   .title {
     display: flex;
@@ -210,6 +253,7 @@ video {
   
   #canvas {
     border-radius: 2%;
+    width: 45vh;
   }
   
   #otra {
@@ -231,17 +275,19 @@ video {
   .texto p {
     columns: 1;
     font-family: Nunito;
+    text-align: justify;
   }
   
   .contactoTitulo {
     width: 100%;
-    min-height: 50vw;
+    display: flex;
+    justify-content: center;
   }
   
   #mapa {
-    width: 50%;
+    width: 100%;
     height: 100%;
-    padding-left: 5vw;
+   /* padding-left: 5vw; */
   }
   
   #contactoMapa {
@@ -250,7 +296,7 @@ video {
     justify-content: space-between;
     align-items: center;
     height: 50vh;
-    margin-top: 45px;
+    margin-top: 25px;
   }
   
   table {
@@ -266,6 +312,7 @@ video {
 
   .lados{
     width: 100%;
+    max-width: 70vw;
   }
   @media (min-width: 1080px) {
   
@@ -274,16 +321,20 @@ video {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      min-height: 50vh;
-      margin-top: 45px;
     }
   
     .canvasContainer {
       padding-left: 10%;
     }
     #clientes, #contacto{
-      font-size: 5vh;
+      font-size: 7vh;
       width: 100%;
+    }
+      
+    #mapa {
+      width: 50%;
+      height: 100%;
+     padding-left: 5vw; 
     }
   }
 
@@ -317,6 +368,14 @@ video {
   .medicamento_container{
     align-items:center;
   }
+
+  #contactoMapa{
+    display: flex;
+    justify-content: space-around;
+    width: 75vw;
+    align-items: center;
+  }
+
   @media (max-width: 1079px) {
     .lados {
       display: flex;
@@ -392,7 +451,7 @@ video {
 
   @media (min-width: 1500px) {
     .texto p {
-      font-size: 1.6vw;
+      font-size: 1.5vw;
     }
   }
   

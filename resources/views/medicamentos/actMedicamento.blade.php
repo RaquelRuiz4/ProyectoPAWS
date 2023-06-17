@@ -1,10 +1,8 @@
 
-<x-app-layout> <h1 class="text-3xl font-bold text-center mt-4">Editar Medicamento</h1>
-    <div class="container w-65 flex justify-center flex-column">
-       
-
-   
-        <form action="{{ route('medicamentos.update', $medicamento->ID_Medicamento) }}" method="POST" class="mb-8">
+<x-app-layout> 
+    <h1 class="text-3xl font-bold text-center mt-4">Editar Medicamento</h1>
+    <div class="container w-65 flex justify-center">
+        <form  action="{{ route('medicamentos.update', $medicamento->ID_Medicamento) }}" method="POST" class="mb-8 w-75 max-w-md">
             @csrf
             <div class="mb-4">
                 <label for="nombre" class="block font-bold">Nombre:</label>

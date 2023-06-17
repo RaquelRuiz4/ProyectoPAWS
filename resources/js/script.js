@@ -35,7 +35,7 @@ drawImage();
 
 async function muestraDatosCuriosos(){
   
-  for(let i=0; i<5; i++){
+  for(let i=0; i<4; i++){
     const req = await fetch("https://dog.ceo/api/breeds/image/random");
     const dato = await req.json();
     galeriaSelector.innerHTML += `
