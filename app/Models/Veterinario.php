@@ -16,7 +16,7 @@ class Veterinario extends Model
     static function consigueDatos()
     {
         return self::
-            join("Usuario", "Usuario.idUsu", "Veterinario.idUsu")
+            join("usuario", "usuario.idUsu", "veterinario.idUsu")
             ->get();
     }
 
