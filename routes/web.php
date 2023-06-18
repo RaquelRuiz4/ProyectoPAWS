@@ -62,8 +62,11 @@ Route::middleware('auth')->group(function () {
             "middleware" => ["auth"]
         ],
         function () {
-            // Muestra las mascotas del usuario
+            // Muestra las mascotas del usuario actual
             Route::get("/mostrar", [MascotasController::class, "mostrar"])->name("mostrar");
+
+            // Muestra mascotas de un usuario 
+            Route::get("/mostrarUsuario/{idCliente}", [MascotasController::class, "muestraMascotasAjenas"])->name("mostrarUsuario");
 
             // Redirige hasta el formulario que actualiza la mascota en cuestión 
             Route::get("/formularioAct/{mascota}", [MascotasController::class, "formularioAct"])->name("formularioAct");

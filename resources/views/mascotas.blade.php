@@ -6,7 +6,9 @@
             <div class="mt-4 alert alert-danger alig-self-center" role="alert">
                 Currently, there are no registered pets.
             </div>
-            <a href="{{ route('mascotas.formularioIns') }}"><button class="btn btn-dark">Insert Pet</button></a>
+            @if(!Auth::user()->admin)
+                <a href="{{ route('mascotas.formularioIns') }}"><button class="btn btn-dark">Insert Pet</button></a>
+            @endif
         </div>
         @else
 
@@ -35,7 +37,7 @@
             
             @endforeach
             @if(Auth::id() == $mascotas[0]->idDue)
-            <a href="{{ route('mascotas.formularioIns') }}"><button class="bg-stone-400 hover:bg-stone-500 text-white font-bold py-2 px-4 rounded">Insert Pet</button></a>
+                <a href="{{ route('mascotas.formularioIns') }}"><button class="bg-stone-400 hover:bg-stone-500 text-white font-bold py-2 px-4 rounded">Insert Pet</button></a>
             @endif
         </div>
         @endempty

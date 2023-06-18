@@ -20,7 +20,7 @@ class MascotasController extends Controller
         return view("mascotas", ["mascotas" => $mascotas]);
     }
 
-    public function muestraMascotasAjenas(Request $req, $idCliente)
+    public function muestraMascotasAjenas($idCliente)
     {
         $mascotas = Perro::consiguePerros($idCliente);
 
@@ -60,10 +60,16 @@ class MascotasController extends Controller
 
         $mascota = Perro::find($idMascota);
         if (!$mascota) {
+            if(Auth::user()->admin){
+                return redirect()->route("inicio");
+            }
             return redirect()->route("mascotas.mostrar");
         }
 
         $mascota->delete();
+        if(Auth::user()->admin){
+            return redirect()->route("mascotas.mostrarUsuario", [$mascota->idDue]);
+        }
 
         return redirect()->route("mascotas.mostrar");
 
@@ -84,6 +90,6 @@ class MascotasController extends Controller
         $mascota->edad = $req->edad;
 
         $mascota->save();
-        return redirect()->route("mascotas.mostrar");
+        return redirect()->route("mascotas.mostrarUsuario", [$mascota->idDue]);
     }
 }
