@@ -17,8 +17,8 @@ class Perro extends Model
     static function consiguePerros($idUsuario)
     {
         return self::
-            join("Usuario", "Usuario.idUsu", "Perro.idDue")
-            ->where("Perro.idDue", $idUsuario)
+            join("usuario", "usuario.idUsu", "perro.idDue")
+            ->where("perro.idDue", $idUsuario)
             ->get();
     }
 }

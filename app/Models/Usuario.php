@@ -53,15 +53,15 @@ class Usuario extends Authenticatable
     static function consigueIdDuenio($idUsuario)
     {
         return self::
-            join("Dueno", "Usuario.idUsu", "Dueno.idDue")
-            ->where("Usuario.idUsu", $idUsuario)
+            join("dueno", "usuario.idUsu", "dueno.idDue")
+            ->where("usuario.idUsu", $idUsuario)
             ->get();
     }
 
     static function devuelveClientes()
     {
         return self::
-            where("Usuario.admin", false)
+            where("usuario.admin", false)
             ->get();
     }
 }

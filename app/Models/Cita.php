@@ -17,19 +17,19 @@ class Cita extends Model
     static function infoCita($idUsuario)
     {
         return self::
-            join("Perro", "Perro.idPer", "Cita.idPer")
-            ->join("Veterinario", "Cita.idVet", "Veterinario.idUsu")
-            ->join("Usuario", "Cita.idVet", "Usuario.idUsu")
-            ->where("Cita.idDue", $idUsuario)
+            join("perro", "perro.idPer", "cita.idPer")
+            ->join("veterinario", "cita.idVet", "veterinario.idUsu")
+            ->join("usuario", "cita.idVet", "usuario.idUsu")
+            ->where("cita.idDue", $idUsuario)
             ->get();
     }
 
     static function todasCitas()
     {
         return self::
-        join("Perro", "Perro.idPer", "Cita.idPer")
-        ->join("Veterinario", "Cita.idVet", "Veterinario.idUsu")
-        ->join("Usuario", "Cita.idVet", "Usuario.idUsu")
+        join("perro", "perro.idPer", "cita.idPer")
+        ->join("veterinario", "cita.idVet", "veterinario.idUsu")
+        ->join("usuario", "cita.idVet", "usuario.idUsu")
         ->get();
     }
 
