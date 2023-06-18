@@ -49,7 +49,7 @@
                 </tbody>
             </table>
             @if(Auth::user()->admin)
-            <a href="{{ route('medicamentos.create') }}" class="bg-gray-800 text-white font-bold py-2 px-4 mt-4 rounded">Add Medication</a>
+            <a href="{{ route('medicamentos.create') }}" class="bg-stone-400 hover:bg-stone-500 text-white font-bold py-2 px-4 rounded">Add Medication</a>
             @endif
 
         </div>

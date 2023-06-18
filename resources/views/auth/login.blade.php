@@ -7,7 +7,7 @@
 
 <div class="loginContainer bg-dark">
     <video class="video_perro" height="100%" autoplay muted loop>
-        <source src=".././perro.mp4" type="video/mp4" />
+        <source src="{{ asset('storage/perro.mp4') }}" type="video/mp4" />
         Your browser doesn't support this video.
     </video>
     <div class="login_container flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
