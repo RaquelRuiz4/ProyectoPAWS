@@ -1,6 +1,5 @@
 @vite(['resources/css/inicio.css'])
 <x-app-layout>
-    <h1 class="titulo">Schedule an Appointment</h1>
     <div class="container w-65 mx-auto">
         <form action="{{ route('citas.insertarCita') }}" method="post" class="max-w-lg mx-auto">
             @csrf
